@@ -110,7 +110,7 @@ already_skullstripped :  [0]
 
 
 # Choice of using AFNI or FSL-BET to perform SkullStripping
-skullstrip_option :  AFNI
+skullstrip_option :  BET
 
 
 # Set the threshold value controlling the brain vs non-brain voxels. Default is 0.6.
@@ -257,7 +257,7 @@ template_skull_for_anat :  $FSLDIR/data/standard/MNI152_T1_${resolution_for_anat
 
 
 # Use either ANTS or FSL (FLIRT and FNIRT) as your anatomical registration method.
-regOption :  ['BET']
+regOption :  ['ANTS']
 
 
 # Register T1 to MNI template
