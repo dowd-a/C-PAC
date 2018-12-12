@@ -1497,12 +1497,12 @@ Maximum potential number of cores that might be used during this run: {max_cores
 
             elif 'Saved Functional Volume' in c.func_reg_input:
                 # Input saved functional image from a previous run
-                workflow.func_to_anat.inputs.inputspec.func = os.path.join(
+                func_to_anat.inputs.inputspec.func = os.path.join(
                             c.workingDirectory, workflow_name,
                             'func_preproc_automask_%d' % num_strat,
-                            'scan_task-rest',
+                            '_scan_task-rest',
                             'func_mean_skullstrip',
-                            'sub-%s_task-rest_bold_calc_tshift_resample_volreg_calc_tstat.nii.gz' % str(subject_id))
+                            '%s_task-rest_bold_calc_tshift_resample_volreg_calc_tstat.nii.gz' % str(subject_id).split('_')[0])
 
             # Input skull-stripped anatomical (anat.nii.gz)
             node, out_file = strat['anatomical_brain']
