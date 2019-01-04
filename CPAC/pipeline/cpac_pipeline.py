@@ -1502,7 +1502,7 @@ Maximum potential number of cores that might be used during this run: {max_cores
                             'func_preproc_automask_%d' % num_strat,
                             '_scan_task-rest',
                             'func_mean_skullstrip',
-                            '%s_task-rest_bold_calc_tshift_resample_volreg_calc_tstat.nii.gz' % str(subject_id).split('_')[0])
+                            '%s_task-rest_bold_calc_resample_volreg_calc_tstat.nii.gz' % str(subject_id).split('_')[0])
 
             # Input skull-stripped anatomical (anat.nii.gz)
             node, out_file = strat['anatomical_brain']
